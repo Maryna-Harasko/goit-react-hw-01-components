@@ -1,47 +1,34 @@
 import PropTypes from 'prop-types';
+import { Wrap, Image, UserName, List, Quantity } from './Profile.styled';
 
 export const Profile = ({dataUser: {username, tag, location, avatar, stats}}) => {
   return (
-    <div 
-    style={{
-      height: '240px',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      fontSize: 24,
-      color: '#010101'
-    }}
-    // className="profile"
-    >
-  <div className="description">
-    <img
-      src= {avatar}
-      alt="User avatar"
-      className="avatar"
-      style={{
-        width: '100px'
-      }}
-    />
-    <p className="name">{username}</p>
-    <p className="tag">{tag}</p>
-    <p className="location">{location}</p>
-  </div>
-
-  <ul className="stats">
-    <li>
-      <span className="label">Followers</span>
-      <span className="quantity">{stats.followers}</span>
-    </li>
-    <li>
-      <span className="label">Views</span>
-      <span className="quantity">{stats.views}</span>
-    </li>
-    <li>
-      <span className="label">Likes</span>
-      <span className="quantity">{stats.likes}</span>
-    </li>
-  </ul>
-</div>
+    <Wrap>
+      <div>
+        <Image
+          src= {avatar}
+          alt="User avatar"
+          className="avatar"
+        />
+        <UserName>{username}</UserName>
+        <p>@{tag}</p>
+        <p>{location}</p>
+      </div>
+      <List>
+        <li>
+          <span className="label">Followers</span>
+          <Quantity>{stats.followers}</Quantity>
+        </li>
+        <li>
+          <span className="label">Views</span>
+          <Quantity>{stats.views}</Quantity>
+        </li>
+        <li>
+          <span className="label">Likes</span>
+          <Quantity>{stats.likes}</Quantity>
+        </li>
+      </List>
+    </Wrap>
   )
 }
 
