@@ -14,7 +14,7 @@ export const App = () => {
     <Layout>
       <GlobalStyle/>
       <Profile dataUser={ user }/>
-      <Statistics stats={data} title/>
+      <Statistics title={'Upload stats'} stats={data}/>
       <FriendList dataFriends={friends}/>
       <TransactionHistory dataTransac={transactions}/>
     </Layout>

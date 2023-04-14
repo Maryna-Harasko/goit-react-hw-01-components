@@ -49,6 +49,5 @@ export const Quantity = styled.span`
   margin-top: 12px;
   font-weight: 700;
   font-size: 22px;
-  /* text-align: center; */
   color: #383737;
 `;
