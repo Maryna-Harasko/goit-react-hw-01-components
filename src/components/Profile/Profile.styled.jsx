@@ -7,7 +7,6 @@ export const Wrap = styled.div`
   color: #8f8e8e;
   border-radius: 4px;
   width: 450px;
-  height: 100%;
   overflow: hidden;
 `
 export const Image = styled.img`
